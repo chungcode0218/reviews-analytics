@@ -16,10 +16,18 @@ for d in data:
 	sum_len = sum_len + len(d)
 print('每筆留言平均長度為:', sum_len/len(data), '個字')
 
-#篩選長度小於100的評論
 
+#篩選長度小於100的評論
 new = []
 for d in data:
 	if len(d) < 100:
 		new.append(d)
 print('一共有', len(new), '筆留言長度小於100')
+
+
+#篩選有提到service的留言
+service = []
+for d in data:
+	if 'service' in d:
+		service.append(d)
+print('一共有', len(service), '筆留言有提到"服務"')
